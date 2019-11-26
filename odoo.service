@@ -1,15 +1,15 @@
 [Unit]
-Description=Odoo11
+Description=odoo
 Requires=postgresql.service
 After=network.target postgresql.service
 
 [Service]
 Type=simple
-SyslogIdentifier=odoo11
+SyslogIdentifier=odoo
 PermissionsStartOnly=true
 User=odoo
 Group=odoo
-ExecStart=/opt/odoo/odoo11/odoo-bin -c /etc/odoo11.conf
+ExecStart=/opt/odoo/odoo/odoo-bin -c /etc/odoo.conf
 StandardOutput=journal+console
 
 [Install]
